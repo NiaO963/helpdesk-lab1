@@ -69,3 +69,39 @@ Standard account type was used intentionally — end users on shared workstation
 macOS keychain password is separate from login password — if user reports keychain prompts after password reset, direct them to Keychain Access in the Utilities folder
 Documented new account name for IT records
 Recommended periodic review of shared workstation user accounts to remove stale accounts
+
+Part 2
+
+Got it — here’s your **step-by-step version with screenshot explanations built into each step**:
+
+---
+
+### **Step-by-Step Lab Actions with Screenshot Explanations**
+
+1. **Viewed user account details**
+   Ran `dscl` to display attributes for `testuser02`.
+   📸 *Screenshot shows the full directory listing, including the `accountPolicyData` section.*
+
+2. **Checked password status indicators**
+   Located `passwordLastSetTime` and `failedLoginCount` in the output.
+   📸 *Screenshot highlights `passwordLastSetTime`, which confirms when the password was last changed, and `failedLoginCount: 0`, indicating no failed login attempts.*
+
+3. **Attempted to reset the password**
+   Executed `sudo dscl . -passwd /Users/testuser02 NewPassword123!`.
+   📸 *Screenshot shows the command being entered in Terminal.*
+
+4. **Encountered authentication requirement**
+   The system prompted for the user’s existing password.
+   📸 *Screenshot displays the “Permission denied. Please enter user's old password” message, showing the reset was not completed in this attempt.*
+
+5. **Corrected command errors**
+   Fixed issues such as a typo in `-passwd` and retried commands.
+   📸 *Screenshot shows the incorrect command (`-passwrd`) and resulting usage/help output.*
+
+6. **Confirmed password change indirectly**
+   Observed that `passwordLastSetTime` had a recent timestamp.
+   📸 *Screenshot again highlights this field, confirming the password had already been successfully changed earlier.*
+
+7. **Verified login capability**
+   Tested authentication using `dscl -authonly` or `su`.
+   📸 *Screenshot shows either a successful silent return (`dscl`) or successful user switch (`su`), confirming the new password works.*
