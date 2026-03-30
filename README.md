@@ -1,8 +1,8 @@
 # helpdesk-lab1
-In this lab, I will be simulating the process of a real-world Level IT Support help desk environment, specifically involving my ability to receive, triage, troubleshoot and resolve common-end-user IT issues. 
+In this lab, I will be simulating the process of a real-world Level IT Support help desk environment, specifically involving my ability to receive, triage, troubleshoot and resolve common end-user IT issues. 
 TICKET-001 — User Account Creation & Password Reset on Shared Workstation
 Ticket Details
-FieldInfoTicket #TICKET-001Date Submitted2026-03-30Submitted BySite Supervisor — Shared Workstation AreaPriorityMediumCategoryUser Account ManagementStatus✅ ResolvedAssigned ToL1 IT Support Technician
+TICKET-001 Date Submitted: 2026-03-30 Submitted By Site Supervisor — Shared Workstation Area Priority: Medium Category: User Account Management Status: ✅ Resolved Assigned To: L1 IT Support Technician
 
 📋 Reported Issue
 
